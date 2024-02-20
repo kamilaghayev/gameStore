@@ -1,0 +1,27 @@
+.btn{
+    border-radius: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 7px 15px;
+    cursor: pointer;
+    box-shadow: none;
+    filter: drop-shadow(none);
+    
+}
+
+.btn__primary {
+    background-color: var(--primary-color);
+}
+
+.btn__secondary {
+    background-color: rgb(80, 82, 84);
+}
+
+.btn__s {
+    font-size: 14px;
+}
+
+.btn__m {
+    font-size: 18px;
+}

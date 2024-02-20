@@ -1,5 +1,6 @@
 import GameBuy from "../game-buy"
 import GameCover from "../game-cover/GameCover"
+import GameGenre from "../game-genre"
 import css from "./gameItem.module.css"
 
 const GameItem = ({ game }) => {
@@ -13,7 +14,7 @@ const GameItem = ({ game }) => {
             </span>
             <div className={css.game__item__genre}>
                 {
-                    game.genres.map(genre => genre)
+                    game.genres.map(genre => <GameGenre key={genre} genre={genre} />)
                 }
             </div>
             <div className={css.game__item__buy}>
