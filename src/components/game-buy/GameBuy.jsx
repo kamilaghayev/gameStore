@@ -1,22 +1,35 @@
-import { useSelector, useDispatch } from "react-redux"
-import { setItemInCart } from "../../store/cart/reducer"
-import CartBtn from "../ui/buttons/cart-btn"
+import { useDispatch, useSelector } from "react-redux"
+import { deleteItemFromCart, setItemInCart } from "../../store/cart/reducer"
+import PrimaryBtn from "../ui/buttons"
 import css from "./gameBuy.module.css"
 const GameBuy = ({ game }) => {
   const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.itemsInCart);
+  const isItemInCart = items.some(item => item.id === game.id);
+
   const addToCart = (e) => {
     e.stopPropagation();
+
+    if (isItemInCart) {
+      return dispatch(deleteItemFromCart(game.id));
+    }
+    
+    dispatch(setItemInCart({
+      price: game.price,
+      id: game.id
+    }))
   }
+
   return (
     <div>
         <span className={css.game__buy__price}>{game.price} $</span>
-        <CartBtn 
+        <PrimaryBtn 
           size="s"
-          type="primary"
+          type={isItemInCart ? "secondary" : "primary"}
           onClick={addToCart}
         >
-          Add to cart
-        </CartBtn>
+          {isItemInCart ? "Remove from cart" : "Add to cart"}
+        </PrimaryBtn>
     </div>
   )
 }
