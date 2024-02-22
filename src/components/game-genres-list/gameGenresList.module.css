@@ -1,0 +1,5 @@
+.game__item__genre {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}

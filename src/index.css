@@ -8,6 +8,7 @@
   --tertiary-color: #000000;
   --gray: #4e4e50;
   --bg-color: #141414;
+  --bg-color-opacity: rgba(20, 20, 20, 0.8);
   --bg-card-color: #111111;
   --text-color: #ffffff;
 
@@ -24,6 +25,12 @@
   --bg-color: #ffffff;
   --text-color: #141414;
 }
+
+*,body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -39,12 +46,19 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--bg-color-opacity);
+}
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  padding-bottom: 15px;
 }
-
+main {
+  padding-top: 100px;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -77,48 +91,52 @@ button:focus-visible {
   }
 }
 
-.App {
+.container {
   max-width: 1320px;
   margin: 0 auto;
   padding:  0 40px;
 }
 
 @media (max-width: 1400px) {
-  .App {
+  .container {
     max-width: 1140px;
   }
 }
 
 @media (max-width: 1200px) {
-  .App {
+  .container {
     max-width: 960px;
   }
 }
 @media (max-width: 992px) {
-  .App {
+  .container {
     max-width: 920px;
   }
 }
 @media (max-width: 768px) {
-  .App {
+  .container {
     max-width: 720px;
   }
 }
 @media (max-width: 576px) {
-  .App {
+  .container {
     max-width: 540px;
   }
 }
 @media (max-width: 540px) {
-  .App {
+  .container {
     max-width: 100%;
     padding: 0 15px;
   }
 }
 
 @media (max-width: 320px) {
-  .App {
+  .container {
     max-width: 100%;
     padding: 0 7px;
   }
+}
+
+.secondary-text {
+  color: var(--gray);
 }

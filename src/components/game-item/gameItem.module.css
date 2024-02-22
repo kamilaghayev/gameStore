@@ -8,34 +8,12 @@
     cursor: pointer;
     position: relative;
 }
-
-
-.game__item__title {
-    font-size: 18px;
-    font-weight: bold;
+.border__radius {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
-
-.game__item__genre {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.game__item__details{
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    max-height: fit-content;
-    justify-content: space-between;
-}
-
 .game__item__description {
     margin-top: 10px;
     font-size: 14px;
 }
 
-.game__item__buy {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-}

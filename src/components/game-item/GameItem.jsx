@@ -1,25 +1,20 @@
-import GameBuy from "../game-buy"
+import { useNavigate } from "react-router-dom"
 import GameCover from "../game-cover/GameCover"
-import GameGenre from "../game-genre"
+import GameItemDetails from "../game-item-details/GameItemDetails"
 import css from "./gameItem.module.css"
 
 const GameItem = ({ game }) => {
-  return (
-    <div className={css.game__item}>
-        <GameCover img={game.image} />
+  const navigate = useNavigate();
 
-        <div className={css.game__item__details}>
-            <span className={css.game__item__title}>
-                {game.title}
-            </span>
-            <div className={css.game__item__genre}>
-                {
-                    game.genres.map(genre => <GameGenre key={genre} genre={genre} />)
-                }
-            </div>
-            <div className={css.game__item__buy}>
-                <GameBuy game={game}/>
-            </div>
+  const navigateToGamePage = () => {
+    navigate(`/game/${game.title}`)
+  }
+
+  return (
+    <div onClick={navigateToGamePage}>
+        <div className={css.game__item}>
+            <GameCover styles={css.border__radius} img={game.image}/>
+            <GameItemDetails game={game}/>
         </div>
     </div>
   )

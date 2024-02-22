@@ -1,0 +1,18 @@
+.game__item__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.game__item__details{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    justify-content: space-between;
+}
+.game__item__buy {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+}

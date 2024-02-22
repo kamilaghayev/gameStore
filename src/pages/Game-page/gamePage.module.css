@@ -1,0 +1,24 @@
+.game__page__content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 40px;
+}
+
+@media (max-width: 980px) {
+    .game__page__content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .game__page__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .game_page__image {
+        
+        height: 300px !important;
+    }
+}
