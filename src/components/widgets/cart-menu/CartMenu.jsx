@@ -9,18 +9,7 @@ import css from "./cartMenu.module.css";
 const CartMenu = ({items, show}) => {
     const visibleModal = show ? css.opened : css.closed;
 
-    const addedItemsInCart = () => {
-        const addedItems = [];
-
-        items.map(item => {
-            GAMES.map(game => {
-                if (item.id === game.id) {
-                    addedItems.push(game);
-                }
-            })
-        });
-        return addedItems;
-    } 
+    const addedItemsInCart = () => GAMES.filter(game => items.some(item => item.id === game.id))
 
     return (
         <div 

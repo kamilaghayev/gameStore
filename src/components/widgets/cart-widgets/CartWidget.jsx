@@ -24,6 +24,7 @@ const CartWidget = () => {
       {totalPrice > 0 ? (
         <span className={css.total__price}>{totalPrice} $</span> 
       ) : null}
+      
       <BiCartAlt 
         size={25} 
         className={css.cart__icon}

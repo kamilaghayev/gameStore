@@ -1,0 +1,12 @@
+.order__page {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.order__page__left, .order__page__right {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+

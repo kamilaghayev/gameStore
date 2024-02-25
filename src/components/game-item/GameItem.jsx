@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import GameCover from "../game-cover/GameCover"
+import GameCover from "../game-cover"
 import GameItemDetails from "../game-item-details/GameItemDetails"
 import css from "./gameItem.module.css"
 

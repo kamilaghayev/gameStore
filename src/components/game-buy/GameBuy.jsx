@@ -25,7 +25,7 @@ const GameBuy = ({ game }) => {
         <span className={css.game__buy__price}>{game.price} $</span>
         <PrimaryBtn 
           size="s"
-          type={isItemInCart ? "secondary" : "primary"}
+          type={isItemInCart ? "gray" : "primary"}
           onClick={addToCart}
         >
           {isItemInCart ? "Remove from cart" : "Add to cart"}
